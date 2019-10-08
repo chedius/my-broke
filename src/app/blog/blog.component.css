@@ -1,0 +1,13 @@
+.container {
+  max-width: 100%;
+  width: 500px;
+  height: 500px;
+  border: 1px solid #000000;
+  background: white;
+  padding: 5px;
+  margin-top: 20px;
+}
+.weq {
+  padding: 5px;
+  width: 100px;
+}
