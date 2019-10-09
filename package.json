@@ -8,6 +8,7 @@
     "e2e": "ng e2e",
     "start": "node server.js",
     "test": "ng test",
+    "postinstall": "-aot",
     "pree2e": "webdriver-manager update",
     "deploy": "git push origin master && git push heroku master"
   },
