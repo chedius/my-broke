@@ -6,7 +6,11 @@
     "build": "webpack",
     "lint": "ng lint",
     "e2e": "ng e2e",
+<<<<<<< HEAD
     "start": "webpack --watch",
+=======
+    "start": "node server.js",
+>>>>>>> 2c1923d890507d9a68f99156ded2763ed354d6a5
     "test": "ng test",
     "pree2e": "webdriver-manager update",
     "deploy": "git push origin master && git push heroku master"
