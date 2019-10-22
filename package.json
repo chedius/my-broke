@@ -3,10 +3,10 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "build": "ng build",
+    "build": "webpack",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "start": "ng build && node server.js",
+    "start": "node server.js",
     "test": "ng test",
     "pree2e": "webdriver-manager update",
     "deploy": "git push origin master && git push heroku master"
