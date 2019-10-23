@@ -1,4 +1,4 @@
-{
+/*{
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
@@ -23,4 +23,20 @@
     "fullTemplateTypeCheck": true,
     "strictInjectionParameters": true
   }
+}*/
+
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "noImplicitAny": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "lib": ["es6", "dom"],
+    "typeRoots": ["node_modules/@types"]
+  },
+  "exclude": ["node_modules"]
 }
