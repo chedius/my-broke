@@ -10,7 +10,8 @@
     "test": "ng test",
     "pree2e": "webdriver-manager update",
     "deploy": "git push origin master && git push heroku master",
-    "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "npm run build",
+    "dev": "nodemon server.js"
   },
   "private": true,
   "dependencies": {
@@ -29,7 +30,7 @@
     "core-js-bundle": "^3.3.3",
     "express": "^4.17.1",
     "lodash": "^4.17.15",
-    "mongodb": "^3.3.3",
+    "mongodb": "^2.2.33",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
     "typescript": "~3.5.3",
@@ -63,6 +64,7 @@
     "karma-jasmine": "~2.0.1",
     "karma-jasmine-html-reporter": "^1.4.0",
     "mini-css-extract-plugin": "^0.8.0",
+    "nodemon": "^1.19.4",
     "npm-install-webpack-plugin": "^4.0.5",
     "protractor": "~5.4.0",
     "style-loader": "^1.0.0",
