@@ -1,0 +1,79 @@
+<div class="container">
+  <form class="card" [formGroup]="form" (ngSubmit)="submit()">
+    <h1>Registration</h1>
+
+    <div class="form-control">
+      <label>User Name</label>
+      <input type="text" placeholder="User Name" formControlName="username" />
+
+      <div
+        *ngIf="form.get('username').invalid && form.get('username').touched"
+        class="validation"
+      >
+        <small class="red" *ngIf="form.get('username').errors.required">
+          User Name field cannot be empty
+        </small>
+        <small class="red" *ngIf="form.get('username').errors.minlength">
+          The length must be at least
+          {{ form.get("username").errors.minlength.requiredLength }}. Now the
+          number of characters
+          {{ form.get("username").errors.minlength.actualLength }}
+        </small>
+      </div>
+    </div>
+
+    <div class="form-control">
+      <label>Password</label>
+      <input
+        type="password"
+        placeholder="Password"
+        formControlName="password"
+      />
+
+      <div
+        *ngIf="form.get('password').invalid && form.get('password').touched"
+        class="validation"
+      >
+        <small class="red" *ngIf="form.get('password').errors.required">
+          Password can not be empty
+        </small>
+
+        <small class="red" *ngIf="form.get('password').errors.minlength">
+          The length must be at least
+          {{ form.get("password").errors.minlength.requiredLength }}. Now the
+          number of characters
+          {{ form.get("password").errors.minlength.actualLength }}
+        </small>
+      </div>
+    </div>
+
+    <div class="form-control">
+      <label>Password</label>
+      <input
+        type="password"
+        placeholder="RePassword"
+        formControlName="repassword"
+      />
+
+      <div
+        *ngIf="form.get('repassword').invalid && form.get('repassword').touched"
+        class="validation"
+      >
+        <small class="red" *ngIf="form.get('repassword').errors.required">
+          Password can not be empty
+        </small>
+
+        <small class="red" *ngIf="form.get('repassword').errors.minlength">
+          The length must be at least
+          {{ form.get("repassword").errors.minlength.requiredLength }}. Now the
+          number of characters
+          {{ form.get("repassword").errors.minlength.actualLength }}
+        </small>
+      </div>
+      <small style="color: red; font-size: 13px">{{ Message() }}</small>
+      <small style="color: green;font-size: 13px">{{ Communication() }}</small>
+    </div>
+
+    <button type="submit" class="btn">Submit</button>
+  </form>
+</div>

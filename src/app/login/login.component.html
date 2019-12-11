@@ -1,0 +1,50 @@
+<div class="container">
+  <form class="card" [formGroup]="forms" (ngSubmit)="onSubmit()">
+    <h1>Login</h1>
+
+    <div class="form-control">
+      <label>User Name</label>
+      <input type="text" placeholder="User Name" formControlName="username" />
+      <div
+        *ngIf="forms.get('username').invalid && forms.get('username').touched"
+        class="validation"
+      >
+        <small class="red" *ngIf="forms.get('username').errors.required">
+          User Name field cannot be empty
+        </small>
+        <small class="red" *ngIf="forms.get('username').errors.minlength">
+          The length must be at least
+          {{ forms.get("username").errors.minlength.requiredLength }}. Now the
+          number of characters
+          {{ forms.get("username").errors.minlength.actualLength }}
+        </small>
+      </div>
+    </div>
+
+    <div class="form-control">
+      <label>Password</label>
+      <input
+        type="password"
+        placeholder="Password"
+        formControlName="password"
+      />
+      <div
+        *ngIf="forms.get('password').invalid && forms.get('password').touched"
+        class="validation"
+      >
+        <small class="red" *ngIf="forms.get('password').errors.required">
+          Password can not be empty
+        </small>
+
+        <small class="red" *ngIf="forms.get('password').errors.minlength">
+          The length must be at least
+          {{ forms.get("password").errors.minlength.requiredLength }}. Now the
+          number of characters
+          {{ forms.get("password").errors.minlength.actualLength }}
+        </small>
+      </div>
+    </div>
+
+    <button type="submit" class="btn" [disabled]="forms.invalid">Submit</button>
+  </form>
+</div>

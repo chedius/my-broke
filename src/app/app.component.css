@@ -1,9 +1,27 @@
-.material-icons {
-  font-size: 60px;
+.nav {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  background:#DC143C;
 }
-a {
-  margin-left: 50px;
+ul{
+  display: flex;
 }
-.nav-wrapper {
-  background: #003e46;
+li{
+  margin: 15px 30px; 
+}
+a{
+  color: white;
+  font-size: 18px;
+}
+li.active a {
+  font-weight: bold;
+  color: #333333;
+  cursor: default;
+}
+.off {
+  display: flex;
+  justify-content: center;
+  font-family: 'Roboto';
+  margin-top: 10px;
 }
